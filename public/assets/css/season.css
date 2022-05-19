@@ -1,0 +1,368 @@
+@import url("index.css");
+.season-wrapper .season-title {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.season-wrapper .season-detail-wrapper {
+  position: relative;
+  padding: 15px 30px;
+}
+.season-wrapper .season-detail-wrapper .season-time-frame-wrapper {
+  position: absolute;
+  right: 0;
+}
+
+#selectedImage {
+
+  border-radius: 15px;
+
+}
+
+#episodeTitle {
+
+  color: #ff593f;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+
+.season-wrapper
+  .season-detail-wrapper
+  .season-time-frame-wrapper
+  .season-time-frame {
+  border: 1px solid #cacaca;
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  color: #fff;
+  padding-right: 130px;
+  margin: 0 5px;
+}
+
+.season-wrapper
+  .season-detail-wrapper
+  .season-time-frame-wrapper
+  .season-time-frame
+  span {
+  background: #ff593f;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  height: 108%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+}
+.season-wrapper .season-detail-wrapper .season-detail {
+  border-bottom: 1px solid #393446;
+  padding-bottom: 20px;
+}
+.season-wrapper .season-detail-wrapper .season-detail h4 {
+  color: #ff593f;
+  font-size: 25px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  padding-left: 0;
+  font-weight: bold;
+}
+
+.seasonRpTitle{
+  color: #ff593f;
+  font-size: 24px;
+  margin: 20px 0;
+  font-weight: 700;
+}
+
+#seasonDesc{
+  color: #fff;
+  text-transform: initial;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.season-wrapper .season-detail-wrapper .season-detail h1 {
+  color: #fff;
+  font-size: 28px;
+}
+.season-wrapper .season-detail-wrapper .season-episodes {
+  position: relative;
+  margin: 20px 0;
+}
+.season-wrapper .season-detail-wrapper .season-episodes button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  font-size: 14px;
+  height: 70%;
+  z-index: 9;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 10px 0 0 10px;
+  color: #fff;
+  top: 0;
+}
+.season-wrapper .season-detail-wrapper .season-episodes button.episode-next {
+  right: 0;
+  border-radius: 0 10px 10px 0;
+}
+.season-wrapper .season-detail-wrapper .season-episodes .episode {
+  width: 95%;
+  margin: auto;
+}
+.season-wrapper .season-detail-wrapper .season-episodes .episode .thumbnail {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: 0.3s all;
+}
+.season-wrapper
+  .season-detail-wrapper
+  .season-episodes
+  .episode.active
+  .thumbnail {
+  border: 2px solid #ff593f;
+}
+.season-wrapper .season-detail-wrapper .season-episodes .episode .tagline {
+  color: #fff;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-top: 5px;
+  padding-left: 2px;
+  font-size: 13px;
+}
+.season-wrapper .season-detail-wrapper .season-description h4 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.season-wrapper .season-detail-wrapper .season-description p {
+  color: #c6c6c6;
+  font-weight: 400;
+  font-size: 14px;
+}
+.season-wrapper .season-detail-wrapper .episode-learning-item h3 {
+  color: #ff593f;
+  font-size: 24px;
+  margin: 20px 0;
+  font-weight: 700;
+}
+
+.season-wrapper .season-detail-wrapper .episode-learning-item .episode-item-wrapper .episode-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  justify-content: center;
+  font-size: 35px;
+  width: 85px;
+  margin-bottom: 5px;
+}
+.season-wrapper
+  .season-detail-wrapper
+  .episode-learning-item
+  .episode-learining {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.season-wrapper .season-detail-wrapper .season-episodes .episode .tagline {
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 10%;
+}
+@media screen and (max-width: 1194px) {
+  .season-wrapper
+    .season-detail-wrapper
+    .episode-learning-item
+    .episode-learining {
+    flex-direction: column;
+  }
+}
+.season-wrapper
+  .season-detail-wrapper
+  .episode-learning-item
+  .episode-item-wrapper {
+  display: inline-block;
+  margin-right: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.season-wrapper
+  .season-detail-wrapper
+  .episode-learning-item
+  .episode-item-wrapper
+  .episode-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  justify-content: center;
+  font-size: 35px;
+  width: 85px;
+  margin-bottom: 5px;
+}
+.season-wrapper
+  .season-detail-wrapper
+  .episode-learning-item
+  .episode-item-wrapper
+  .episode-item
+  span {
+  position: absolute;
+}
+.season-wrapper .season-detail-wrapper .enter-episode a,
+.enterEpisodeButton {
+  z-index: 999;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 17px;
+  font-weight: 400;
+  padding: 15px 35px;
+  margin-left: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(252, 44, 104, 1) 0%,
+    rgba(255, 89, 63, 1) 50%
+  );
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.enterEpisodeButton{
+  display: none;
+  padding: 15px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.seasonEpisodeSwiper {
+  margin-bottom: 25px;
+}
+
+.seasonEpisodeSwiper .swiper-slide{
+  text-align: center;
+}
+
+.season-wrapper .more-season-wrapper {
+  margin-top: 40px;
+  /*margin-bottom: 20px;*/
+}
+.season-wrapper .more-season-wrapper .title {
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.season-wrapper .more-season-wrapper .title .pagination {
+  position: absolute;
+  color: #ff593f;
+  font-size: 15px;
+  right: 0;
+}
+.season-wrapper .more-season-wrapper .title .pagination button {
+  background: transparent;
+  border: none;
+  color: #ff593f;
+  padding: 0 5px;
+}
+.season-wrapper .more-season-wrapper .seriesSwiper {
+  overflow: hidden;
+}
+.season-wrapper .more-season-wrapper .season {
+  position: relative;
+  width: 92%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.season-wrapper .more-season-wrapper .season .tagline {
+  position: absolute;
+  z-index: 99;
+  top: 12px;
+  color: #fff;
+  border-radius: 0 20px 20px 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 300;
+  left: 0;
+  padding: 5px 15px;
+  background: linear-gradient(
+    90deg,
+    rgba(252, 44, 104, 1) 0%,
+    rgba(255, 89, 63, 1) 50%
+  );
+}
+
+.loadingEpData{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9999999;
+  border-radius: 8px;
+  display: none;
+}
+
+@media screen and (max-width: 1194px) {
+  .season-wrapper .season-detail-wrapper .season-time-frame-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .season-wrapper
+    .season-detail-wrapper
+    .season-time-frame-wrapper
+    .season-time-frame {
+    margin-bottom: 10px;
+  }
+  .season-wrapper
+    .season-detail-wrapper
+    .episode-learning-item
+    .episode-item-wrapper
+    .episode-item {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .season-wrapper .season-title img {
+    display: none;
+  }
+  .season-wrapper .season-title .enter-season {
+    position: unset;
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 763px) {
+  .season-wrapper .season-detail-wrapper {
+    padding: 15px 0;
+  }
+  .season-wrapper
+    .season-detail-wrapper
+    .episode-learning-item
+    .episode-item-wrapper
+    .episode-item {
+    width: 70px;
+    font-size: 25px;
+  }
+}

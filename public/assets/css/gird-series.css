@@ -1,0 +1,70 @@
+.series:hover .thumbnail .description {
+  pointer-events: all;
+  opacity: 1;
+
+  background-color: #2b093e;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 0 5%;
+}
+.thumbnail .description {
+  pointer-events: all;
+  opacity: 1;
+}
+.series .thumbnail .description p {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 300;
+}
+.series .thumbnail .description button {
+  border-radius: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(252, 44, 104, 1) 0%,
+    rgba(255, 89, 63, 1) 50%
+  );
+  font-size: 14px;
+  border: none;
+  display: inline-block;
+  padding: 7px 30px;
+  color: #fff;
+  transition: 0.4s all;
+  font-weight: 300;
+  margin-top: 15px;
+}
+.series .thumbnail {
+  position: relative;
+}
+.series .thumbnail img {
+  width: 100%;
+}
+.series .title {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 13px;
+  justify-content: center;
+  text-transform: capitalize;
+}
+.series .thumbnail .description {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.3s all;
+  background: rgba(0, 0, 0, 0.4);
+}
+.series {
+  padding: 10px;
+  width: 96%;
+  margin: auto;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}

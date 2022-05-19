@@ -1,0 +1,107 @@
+@import url("index.css");
+.auth-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.auth-wrapper .auth-box {
+  background: #fff;
+  padding: 60px 40px;
+  border-radius: 15px;
+  width: 420px;
+  box-sizing: border-box;
+  text-align: center;
+  max-width: 95%;
+  position: relative;
+}
+
+.verification-wrapper .auth-box {
+  padding-bottom: 20px;
+}
+.auth-wrapper .auth-box .title {
+  font-weight: 500;
+  font-size: 35px;
+}
+.confirm-wrapper .auth-box .title{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 763px) {
+  .auth-wrapper .auth-box {
+    padding: 40px 20px;
+  }
+  .auth-wrapper .auth-box .title {
+    font-size: 25px;
+  }
+}
+.auth-wrapper .auth-box .tagline {
+  font-size: 14px;
+  margin: 15px 0;
+}
+.auth-wrapper .auth-box .user-email {
+  margin: 15px 0 10px;
+  font-size: 14px;
+  color: #707070;
+}
+.auth-wrapper .auth-box .user-email span {
+  font-size: 13px;
+}
+.auth-wrapper .auth-box .input-box input {
+  font-weight: 300;
+  font-size: 14px;
+  width: 95%;
+  margin: auto;
+  display: block;
+  margin-top: 30px;
+  border: 1px solid #e6e6e6;
+  background: #f9f9f9;
+  transition: 0.3s all;
+  border-radius: 4px;
+  padding: 12px;
+}
+.forget-wrapper .auth-box .input-box input {
+  margin: 20px auto;
+  margin-top: 30px;
+}
+.auth-wrapper .auth-box .input-box input:focus {
+  border: 1px solid #0a0120;
+}
+.auth-wrapper .auth-box .forget-password {
+  color: #fc2c68;
+  margin: 15px 0 0;
+  font-size: 15px;
+}
+.auth-wrapper .auth-box .resend-code {
+  margin: 15px 0 0;
+  color: #707070;
+  font-size: 15px;
+}
+.auth-wrapper .auth-box button {
+  border-radius: 50px;
+  background: linear-gradient(
+    90deg,
+    rgba(252, 44, 104, 1) 0%,
+    rgba(255, 89, 63, 1) 50%
+  );
+  font-size: 16px;
+  border: none;
+  display: inline-block;
+  padding: 15px 0;
+  width: 65%;
+  color: #fff;
+  font-weight: 500;
+  margin: 20px 0 0;
+}
+.auth-wrapper .auth-box button:hover {
+  background: linear-gradient(90deg, rgb(247, 24, 87) 0%, rgb(243, 62, 34) 50%);
+}
+.reset-wrapper .auth-box button {
+  margin-top: 30px;
+}
+.auth-wrapper .auth-box .box-footer {
+  margin-top: 50px;
+  color: #707070;
+  font-size: 15px;
+  text-align: center;
+}

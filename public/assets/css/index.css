@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600&display=swap");
+@import url("icons.css");
+
+
+:root{
+  --primaryColor:#ff593f;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  min-height: 100%;
+}
+* {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+}
+body {
+  background: url(../images/background.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+::-moz-selection {
+  color: #fff;
+  background: #ff593f;
+}
+
+::selection {
+  color: #fff;
+  background: rgba(255, 89, 63, 0.9);
+}
+section {
+  position: relative;
+}
+img {
+  font-size: 11px;
+  max-width: 100%;
+}
+a {
+  color: inherit;
+}
+.transition {
+  transition: 0.3s all;
+}
+.text-primary {
+  color: #fc2c68 !important;
+}
+.text-secondary {
+  color: #ff593f !important;
+}
+
+.swiper-pagination-bullet{
+  margin: 0 6px;
+}
+
+.loadingMainBox{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999999;
+}
+
+.loadingBox{
+  color: #fff;
+  font-size: 40px;
+}
+
+.main-wrapper .side-bar {
+  position: fixed;
+  left: 0;
+  height: 100%;
+  padding: 20px 0px;
+  width: 18%;
+  background: #100330;
+  top: 0;
+}
+.main-wrapper .side-bar.active {
+  width: 6%;
+}
+.main-wrapper .side-bar .logo-box {
+  width: 60%;
+  margin: 40px auto;
+}
+.main-wrapper .side-bar .logo-box .logo-sm {
+  display: none;
+}
+.main-wrapper .side-bar .menu li {
+  color: #7f7a8a;
+  border-left: 4px solid transparent;
+  margin: 25px 0;
+  font-size: 14px;
+  transition: 0.3s all;
+}
+.main-wrapper .side-bar .menu li a.active {
+  border-left: 4px solid #ff593f;
+  color: #fff;
+}
+.main-wrapper .side-bar .menu li:hover {
+  color: #fff;
+}
+.main-wrapper .side-bar .menu li a {
+  padding: 12px 15px;
+  display: block;
+}
+.main-wrapper .side-bar .menu li a i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+.main-wrapper .side-bar .menu li a svg {
+  margin-right: 10px;
+  font-size: 18px;
+}
+.main-wrapper .side-bar.active .menu li {
+  text-align: center;
+}
+.main-wrapper .side-bar.active .menu li span {
+  display: none;
+}
+.main-wrapper .side-bar.active .menu li a i {
+  font-size: 20px;
+}
+.main-wrapper .page-content {
+  margin-left: 24%;
+  padding-right: 30px;
+}
+.inner-wrapper .page-content {
+  width: 95%;
+  margin: auto;
+  overflow: hidden;
+}
+.main-wrapper .page-content.active {
+  margin-left: 13%;
+}
+
+.main-wrapper .page-content header {
+  position: relative;
+  padding: 20px 0;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #393446;
+}
+.inner-wrapper .page-content header {
+  padding-left: 80px;
+}
+.main-wrapper .page-content header .back-button {
+  position: absolute;
+  background: transparent;
+  color: #fff;
+  border: none;
+  left: 0;
+  font-size: 22px;
+}
+.main-wrapper .page-content header .toggle-box {
+  position: absolute;
+  left: -5%;
+  background: transparent;
+  border: none;
+}
+.main-wrapper .page-content header .search-box {
+  background: #282434;
+  position: relative;
+  border-radius: 50px;
+  padding: 10px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.main-wrapper .page-content header .search-box input {
+  background: transparent;
+  border: none;
+  color: #fff;
+  padding: 3px 10px;
+  font-size: 15px;
+  width: 90%;
+}
+
+.main-wrapper .page-content header .search-box button {
+  position: absolute;
+  right: 10px;
+  padding: 5px 10px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+}
+.main-wrapper .page-content header .profile-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-wrapper .page-content header .profile-box button {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  padding-left: 15px;
+  margin-left: 20px;
+}
+.main-wrapper .page-content header .profile-box button .noti {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #ff593f;
+  border-radius: 40px;
+  right: -4px;
+  top: 3px;
+}
+
+.main-wrapper .page-content header .profile-box button img {
+  width: 45px;
+}
+.main-wrapper .page-content header .profile-box .dropdown-content {
+  position: absolute;
+  right: 0;
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  margin-top: 16px;
+  border-radius: 5px;
+  padding: 10px 0 5px 0;
+  min-width: 280px;
+  transition: 0.4s all;
+  transform: translateY(-10px);
+  z-index: 99;
+  pointer-events: none;
+  opacity: 0;
+}
+.main-wrapper .page-content header .profile-box .dropdown-content.active {
+  transform: translateY(0);
+  pointer-events: all;
+  opacity: 1;
+}
+.main-wrapper
+  .page-content
+  header
+  .profile-box
+  .profile-wrapper
+  .dropdown-content {
+  min-width: 180px;
+}
+
+.main-wrapper .page-content header .profile-box .dropdown-content li {
+  font-size: 13px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #5e5e5e;
+  display: block;
+}
+.main-wrapper .page-content header .profile-box .dropdown-content li a {
+  padding: 8px 15px;
+  display: block;
+}
+.main-wrapper .page-content header .profile-box .dropdown-content li:hover {
+  color: #000;
+}
+
+.main-wrapper .page-content header .profile-box .dropdown-content li.title {
+  font-size: 14px;
+  color: #000;
+  padding: 8px 15px;
+}
+.main-wrapper
+  .page-content
+  header
+  .profile-box
+  .dropdown-content
+  li.title
+  span {
+  color: #ff593f;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.main-wrapper .page-content header .profile-box .dropdown-content li.see-all {
+  font-size: 12px;
+  text-align: center;
+  color: #ff593f;
+  font-weight: 600;
+}
+.main-wrapper .page-content header .bread-crumb {
+  height: 100%;
+  margin: 0;
+}
+.main-wrapper .page-content .bread-crumb {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.main-wrapper .page-content .mobile-crumb {
+  display: none;
+}
+.main-wrapper .page-content .bread-crumb li {
+  display: inline-block;
+  color: #fff;
+  font-size: 14px;
+  padding: 3px 8px;
+}
+.main-wrapper .page-content .bread-crumb li.active {
+  color: #ff593f;
+}
+.main-wrapper .page-content .bread-crumb li i {
+  font-size: 12px;
+}
+
+
+.siteModalMain{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeModalBtn{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  background-color: #fff;
+  border-radius: 7px;
+  color: #fc2c68;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 25px;
+  user-select: none;
+}
+
+.SQQ-image{
+  position: absolute;
+width: 300px;
+transform: translate(-110%,-20%);
+top: 50%;
+}
+
+.seasonEpisodeSwiper .swiper-wrapper{
+  padding: 0 30px;
+}
+
+.setShowNav .right,
+.setShowNav .left{
+  display: block !important;
+}
+
+@media screen and (max-width: 763px) {
+  .main-wrapper .side-bar .menu li span {
+    display: none !important;
+  }
+  .main-wrapper .side-bar .menu li a {
+    text-align: center;
+  }
+  .main-wrapper .page-content {
+    padding: 0 10px;
+  }
+  .main-wrapper .page-content header {
+    justify-content: flex-end;
+  }
+  .main-wrapper .page-content header .toggle-box {
+    display: none;
+  }
+  .main-wrapper .page-content header .search-box {
+    display: none;
+  }
+  .main-wrapper .page-content header .profile-box .dropdown-content {
+    min-width: 200px;
+  }
+  .main-wrapper .page-content header .profile-box .dropdown-content li {
+    font-size: 11px;
+  }
+  .main-wrapper .page-content header .bread-crumb {
+    display: none !important;
+  }
+  .main-wrapper .page-content .bread-crumb {
+    display: block !important;
+  }
+}
+
+ul.bread-crumb li a { font-size :18px; }

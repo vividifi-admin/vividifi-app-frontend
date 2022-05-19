@@ -1,0 +1,100 @@
+.signup-wrapper {
+  padding: 20px 0;
+}
+.signup-wrapper .auth-box {
+  width: 800px;
+  padding: 40px 60px;
+  max-width: 95%;
+}
+.signup-wrapper .auth-box p {
+  width: 60%;
+  margin: 15px auto !important;
+  font-weight: 300;
+}
+
+.signup-wrapper .auth-box .input-box i ,
+.signup-wrapper .auth-box .input-box svg {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  cursor: pointer;
+}
+
+.signup-wrapper .auth-box button {
+  width: 250px;
+  margin-top: 50px;
+}
+.signup-wrapper .auth-box .box-footer {
+  margin-top: 20px;
+}
+.signup-wrapper .agree-terms {
+  padding-top: 20px;
+  text-align: left;
+  padding-left: 10px;
+}
+.signup-wrapper .agree-terms label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 350;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.signup-wrapper .agree-terms label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.signup-wrapper .agree-terms label .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  border-radius: 4px;
+  background-color: #eee;
+}
+
+.signup-wrapper .agree-terms label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.signup-wrapper .agree-terms label input:checked ~ .checkmark {
+  background-color: #ff593f;
+}
+
+.signup-wrapper .agree-terms label .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.signup-wrapper .agree-terms label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.signup-wrapper .agree-terms label .checkmark:after {
+  left: 8px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 763px) {
+    .signup-wrapper .auth-box {
+      padding: 20px;
+    }
+  }
