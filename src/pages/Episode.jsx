@@ -19,6 +19,8 @@ import { getUser } from "../services/getClinet";
 import Countdown from "react-countdown";
 import { useSpeechSynthesis } from "react-speech-kit";
 import { getHowTo } from "../services/getEpisode";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const Episode = () => {
   let selectedItemQuiz = 0;
@@ -59,6 +61,8 @@ const Episode = () => {
   
   const { speak } = useSpeechSynthesis();
 
+  const [imageArr, setImageArr] = useState([])
+  const [showSlider, setShowSlider] = useState(false)
 
   let learningItemId = -1 ;
   const quizScore = 100;
@@ -128,6 +132,7 @@ const Episode = () => {
       }
     }
   }, [singleEpisode]);
+
   const checkValue = (e) => {
     selectedItemQuiz = $(e).val();
     setAnswer(selectedItemQuiz);
@@ -230,8 +235,6 @@ const Episode = () => {
     var image = new Image();
     image.onload = function () {
       console.info("Image loaded !");
-      $(".infoImage").children("img").attr("src", image.src).fadeIn(500);
-      $(".infoImage").children("img").fadeIn(1000);
       $(".loaderForImage").fadeOut(400);
     };
     image.onerror = function () {
@@ -244,7 +247,9 @@ const Episode = () => {
       if (element.MediaType == "infographics") {
         if (id == element._id) {
           // console.log(element);
-
+          setImageArr(element.Media[0].split(","))
+          setShowSlider(true)
+          console.log("Media", element.Media[0])
           image.src = element.Media[0];
         }
       }
@@ -1529,6 +1534,26 @@ const rendererCountDown = ({ hours, minutes, seconds, completed }) => {
             <img src="/assets/images/vividifi_Loader.gif" alt="#" />
           </div>
           <img src="" alt="" />
+          {showSlider &&
+              
+              <div>
+                {imageArr && 
+                
+                <Carousel dynamicHeight autoPlay interval={3000} renderThumbs={()=> null} infiniteLoop={true} useKeyboardArrows>
+                  
+                    {imageArr.map((image) => {
+                      return (
+                          <img src={image} width="100%" height="400px" />
+                      )
+                    })}
+                   
+                  
+                </Carousel>
+                 }
+              </div>
+              
+              
+          }
         </div>
         <div className="text-center">
           <button
