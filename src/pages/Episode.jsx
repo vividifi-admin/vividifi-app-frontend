@@ -1543,7 +1543,7 @@ const rendererCountDown = ({ hours, minutes, seconds, completed }) => {
                   
                     {imageArr.map((image) => {
                       return (
-                          <img src={image} width="100%" height="400px" />
+                          <img src={image} width="100%"/>
                       )
                     })}
                    
